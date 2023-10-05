@@ -1,0 +1,75 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#board {
+    padding: 25px;
+}
+
+#board .row {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 5px;
+    padding-bottom: 5px;
+    width: 250px;
+}
+
+#board .row div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 30px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#keyboard {
+    padding-top: 150px;
+}
+
+#keyboard .row {
+    display: grid;
+    grid-gap: 3px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+#keyboard .row:nth-child(1) {
+    grid-template-columns: repeat(10, auto);
+}
+#keyboard .row:nth-child(2) {
+    grid-template-columns: repeat(9, auto);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#keyboard .row:nth-child(3) {
+    grid-template-columns: repeat(9, auto);
+}
+
+#keyboard .row div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: rgba(128, 128, 128, 0.56);
+    color: black;
+    font-weight: bold;
+}
+
+#keyboard .row:last-child div:first-child,
+#keyboard .row:last-child div:last-child {
+    width: 40px;
+    font-size: 10px;
+}
