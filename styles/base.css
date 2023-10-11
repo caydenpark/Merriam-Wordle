@@ -73,7 +73,10 @@ body {
     font-weight: bold;
 }
 
-#keyboard .row:last-child div:first-child,
+#keyboard .row:last-child div:first-child {
+    width: 40px;
+    font-size: 9px;
+}
 #keyboard .row:last-child div:last-child {
     width: 40px;
     font-size: 10px;

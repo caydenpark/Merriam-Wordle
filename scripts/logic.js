@@ -45,17 +45,58 @@ function createBoard() {
         const row = document.createElement('div');
         row.classList.add('row');
     
+        // Adjusts width, height, and fontSize for each cell
         for (let j = 0; j < numCols; j++) {
             const col = document.createElement('div');
-            if (wotdLength > 6) {
-                if (6 < wotdLength <= 8) {
-                    col.style.width = "30px";
-                    col.style.height = "30px";
+            if (wotdLength > 5) {
+                if (wotdLength == 6) {
+                    col.style.width = "45px";
+                    col.style.height = "45px";
+                    col.style.fontSize = "20px";
+                } 
+                else if (wotdLength == 7) {
+                    col.style.width = "39px";
+                    col.style.height = "39px";
+                    col.style.fontSize = "20px";
+                } 
+                else if (wotdLength == 8) {
+                    col.style.width = "34px";
+                    col.style.height = "34px";
                     col.style.fontSize = "20px";
                 }
-                else if (8 < wotdLength <= 10) {
-                    col.style.width = "35px";
-                    col.style.height = "35px";
+                else if (wotdLength == 9) {
+                    col.style.width = "29px";
+                    col.style.height = "29px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 10) {
+                    col.style.width = "26px";
+                    col.style.height = "26px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 11) {
+                    col.style.width = "23px";
+                    col.style.height = "23px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 12) {
+                    col.style.width = "20px";
+                    col.style.height = "20px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 13) {
+                    col.style.width = "18px";
+                    col.style.height = "18px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 14) {
+                    col.style.width = "16px";
+                    col.style.height = "16px";
+                    col.style.fontSize = "15px";
+                }
+                else if (wotdLength == 15) {
+                    col.style.width = "15px";
+                    col.style.height = "15px";
                     col.style.fontSize = "15px";
                 }
             } else {
