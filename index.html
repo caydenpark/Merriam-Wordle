@@ -5,56 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WATDle</title>
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/logic.js"></script>
 </head>
 <body>
     <header>
         <h1>WATDle</h1>
     </header>
     <main>
-        <section id="board">
-            <div class="row">
-                <div>D</div>
-                <div>R</div>
-                <div>I</div>
-                <div>V</div>
-                <div>E</div>
-            </div>
-            <div class="row">
-                <div>D</div>
-                <div>R</div>
-                <div>I</div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="row">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </section>
+        <div id="boardContainer">
+            <section id="board">
+                <!-- Populates using createBoard() from logic.js -->
+            </section>
+        </div>
+        <div id="keyboardContainer">
         <section id="keyboard">
             <div class="row">
                 <div id="q">Q</div>
@@ -91,6 +54,7 @@
                 <div id="delete">DEL</div>
             </div>
         </section>
+        </div>
     </main>
 </body>
 </html>
