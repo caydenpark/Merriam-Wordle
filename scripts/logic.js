@@ -109,3 +109,4 @@ function createBoard() {
         container.appendChild(row);
     }
 }
+
