@@ -9,8 +9,8 @@ async function fetchWOTD() {
             const htmlContent = await response.text();
             const tempDiv = document.createElement("div");
             tempDiv.innerHTML = htmlContent;
-            // wotd = tempDiv.querySelector(".word-header-txt").innerText.toUpperCase();
-            wotd = "Block".toUpperCase();
+            wotd = tempDiv.querySelector(".word-header-txt").innerText.toUpperCase();
+            // wotd = "Block".toUpperCase();
             if (tempDiv.querySelector(".word-header-txt")) {
                 // The fetch is complete, and wotd has been set
                 console.log("Merriam-Webster's WOTD: ", wotd);
