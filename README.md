@@ -9,6 +9,7 @@ I then set out to create the game knowing that it would put my HTML/CSS and Java
 # Development Environment
 
 IDE: Visual Studio Code
+
 Languages: HTML, CSS, JavaScript
 
 # Useful Websites
