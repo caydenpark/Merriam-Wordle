@@ -9,8 +9,8 @@ async function fetchWOTD() {
             const htmlContent = await response.text();
             const tempDiv = document.createElement("div");
             tempDiv.innerHTML = htmlContent;
-            wotd = tempDiv.querySelector(".word-header-txt").innerText.toUpperCase();
-            // wotd = "Block".toUpperCase();
+            // wotd = tempDiv.querySelector(".word-header-txt").innerText.toUpperCase();
+            wotd = "Block".toUpperCase();
             if (tempDiv.querySelector(".word-header-txt")) {
                 // The fetch is complete, and wotd has been set
                 console.log("Merriam-Webster's WOTD: ", wotd);
@@ -177,11 +177,13 @@ keyboard.addEventListener('click', (e) => {
                         remainingLetters.splice(indexToRemove, 1);
                     }
                     console.log(`tileID: ${tileId}`);
-                    console.log(`tile: ${tile}`);
-                    
                     tile.classList.add('green-tile');
+                    const keyboardLetter = document.getElementById(tile.innerText);
+                    keyboardLetter.classList.add('green-key');
                 } else {
                     tile.classList.add('gray-tile');
+                    const keyboardLetter = document.getElementById(tile.innerText);
+                    keyboardLetter.classList.add('gray-key');
                 }
                 console.log(`Remaining Letters: ${remainingLetters}`);
             }
@@ -196,6 +198,8 @@ keyboard.addEventListener('click', (e) => {
                         remainingLetters.splice(indexToRemove, 1);
                     }
                     tile.classList.add('yellow-tile');
+                    const keyboardLetter = document.getElementById(tile.innerText);
+                    keyboardLetter.classList.add('yellow-key');
                 }
                 console.log(`Remaining Letters: ${remainingLetters}`);
             }
