@@ -4,6 +4,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #e3e3e1;
+}
+
+#merriam {
+    font-family: Times New Roman;
+    font-weight: 100;
+    font-stretch: condensed;
+    color: #105397;
+}
+
+#wordle {
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Serif', serif;
+    color: black;
 }
 
 #boardContainer {
@@ -13,7 +29,7 @@ body {
 }
 
 #board {
-    padding-bottom: 10px;
+    padding-bottom: 40px;
 }
 
 #board .row {
@@ -21,18 +37,18 @@ body {
     grid-template-columns: repeat(5, auto);
     grid-gap: 5px;
     padding-bottom: 5px;
-    /* width: 250px; */
 }
 
 #board .row div {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-    border-radius: 2px;
+    border: 1px solid #b7b8b9;
+    border-radius: 5px;
     background-color: white;
     color: black;
     font-weight: bold;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
 }
 
 
@@ -64,11 +80,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px; 
-    height: 40px;
+    width: 35px; 
+    height: 45px;
     border-radius: 3px;
-    font-size: 15px;
-    background-color: rgba(128, 128, 128, 0.56);
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #d3d6da;
     color: black;
     font-weight: bold;
 }
@@ -77,29 +94,64 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px; 
-    height: 40px;
+    width: 40px; 
+    height: 45px;
     border-radius: 3px;
-    font-size: 25px;
-    background-color: rgba(128, 128, 128, 0.56);
+    font-size: 26px;
+    background-color: #d3d6da;
     color: black;
     font-weight: 325;
 }
 
 #keyboard #enter {
     width: 45px;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 .gray-tile {
-    background-color: rgba(76, 76, 76, 0.601) !important;
+    background-color: #787c7e !important;
     color: white !important;
+    animation: tileFlip .5s ease;
 }
 .yellow-tile {
-    background-color: rgba(216, 216, 35, 0.845) !important;
+    background-color: #c9b458 !important;
     color: white !important;
+    animation: tileFlip 1s ease;
 }
 .green-tile {
-    background-color: rgb(0, 203, 0) !important;
+    background-color: #6aaa64 !important;
     color: white !important;
+    animation: tileFlip 1.5s ease;
+}
+
+@keyframes tileFlip {
+    0% {transform: scaleY(1);}
+    50% {transform: scaleY(0);}
+    100% {transform: scaleY(1);}
+}
+
+.gray-key {
+    animation: keyFlipGray 1s forwards;
+    animation-delay: .5s;
+}
+.yellow-key {
+    animation: keyFlipYellow .5s forwards;
+    animation-delay: 1s;
+}
+.green-key {
+    animation: keyFlipGreen 0s forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes keyFlipGray {
+    from {background-color: #d3d6da; color: black;}
+    to {background-color: #787c7e; color: white;}
+}
+@keyframes keyFlipYellow {
+    from {background-color: #d3d6da; color: black;}
+    to {background-color: #c9b458; color: white;}
+}
+@keyframes keyFlipGreen {
+    from {background-color: #d3d6da; color: black;}
+    to {background-color: #6aaa64; color: white;}
 }
