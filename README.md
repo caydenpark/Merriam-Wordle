@@ -4,7 +4,9 @@ When the viral word game, "Wordle" came out, I was immediately hooked on it. I p
 
 I then set out to create the game knowing that it would put my HTML/CSS and JavaScript skills to the test. Prior to this project, I had not used APIs which intimidated me. I was unable to find the API documentation that I required from Merriam-Webster, so I used JavaScript's Fetch API to get the datum that I needed. This project pushed me to create a single dynamic web page in which users can enjoy their time.
 
-[Software Demo Video](https://www.youtube.com/watch?v=E6-IoybbV74)
+![Merriam-Wordle Screenshot](images/app_screenshot.png)
+
+<!-- [Software Demo Video](https://www.youtube.com/watch?v=E6-IoybbV74) -->
 
 # Development Environment
 
